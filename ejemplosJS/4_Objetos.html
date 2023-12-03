@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Objetos</title>
+        <meta charset="UTF-8"/>
+        <script>
+            //keyword new
+            var persona = new Object();
+            //atributos describen al objeto
+            persona.nombre = "Daniela";
+            //acciones que puede realizar el objeto
+            persona.hablar = function(){
+            	document.write("Hola ");
+            };
+            
+            persona.hablar();
+            
+            //Declaracion mediante la notacion JSON
+            //JavaScript Object Notation (JSON)
+            var gato = {
+            	nombre: "Felix",
+            	maulla: function(){
+            		document.write("<p>miau miau</p>");
+            	},
+            	presentarse: function(){
+            		document.write("<p>Mi nombre " + this.nombre + "</p>");
+            	}
+            };
+            
+            gato.maulla();
+            gato.presentarse();
+            
+            //se le pueden ir colocando atributos a los objetos
+            gato.raza = "Siames";
+            
+            document.write("<p>" + JSON.stringify(gato) + "</p>");
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
